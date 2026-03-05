@@ -1,600 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CentrivaLab – High-throughput centrifugal membrane screening</title>
-
-<style>
-:root{
-  --navy:#0a2540;
-  --blue:#1f6feb;
-  --light:#f5f7fb;
-  --text:#1f2937;
-  --muted:#5b6575;
-  --card:#ffffff;
-  --line:#d9e1ec;
-}
-
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  color:var(--text);
-  line-height:1.65;
-  background:
-    linear-gradient(rgba(245,247,251,0.94), rgba(245,247,251,0.94)),
-    url("background.svg");
-  background-size:cover;
-  background-attachment:fixed;
-}
-
-.container{
-  max-width:1100px;
-  margin:0 auto;
-  padding:0 24px;
-}
-
-header{
-  background:linear-gradient(135deg, #0a2540 0%, #12345a 100%);
-  color:white;
-  padding:28px 0 80px 0;
-  border-bottom:1px solid rgba(255,255,255,0.08);
-}
-
-.topbar{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-  margin-bottom:40px;
-}
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
-
-.brand img{
-  height:52px;
-  width:auto;
-  display:block;
-}
-
-.brand-name{
-  font-size:28px;
-  font-weight:700;
-  letter-spacing:0.2px;
-}
-
-.nav{
-  display:flex;
-  gap:22px;
-  flex-wrap:wrap;
-}
-
-.nav a{
-  color:white;
-  text-decoration:none;
-  opacity:0.9;
-  font-size:15px;
-}
-
-.hero{
-  display:grid;
-  grid-template-columns:1.15fr 0.85fr;
-  gap:40px;
-  align-items:center;
-}
-
-.hero h1{
-  font-size:46px;
-  line-height:1.1;
-  margin:0 0 16px 0;
-}
-
-.hero p{
-  font-size:19px;
-  color:rgba(255,255,255,0.88);
-  margin:0 0 22px 0;
-  max-width:720px;
-}
-
-.hero-actions{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-  margin-top:26px;
-}
-
-.btn{
-  display:inline-block;
-  padding:12px 18px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:700;
-  font-size:15px;
-}
-
-.btn-primary{
-  background:#ffffff;
-  color:var(--navy);
-}
-
-.btn-secondary{
-  background:transparent;
-  color:white;
-  border:1px solid rgba(255,255,255,0.35);
-}
-
-.hero-card{
-  background:rgba(255,255,255,0.07);
-  border:1px solid rgba(255,255,255,0.12);
-  border-radius:18px;
-  padding:22px;
-  backdrop-filter:blur(3px);
-}
-
-.hero-card h3{
-  margin:0 0 10px 0;
-  font-size:18px;
-}
-
-.hero-card p{
-  margin:0;
-  font-size:15px;
-  color:rgba(255,255,255,0.82);
-}
-
-main{
-  padding:56px 0 80px 0;
-}
-
-section{
-  margin-bottom:58px;
-}
-
-.section-title{
-  font-size:32px;
-  color:var(--navy);
-  margin:0 0 14px 0;
-}
-
-.section-intro{
-  color:var(--muted);
-  font-size:17px;
-  max-width:900px;
-}
-
-.grid-2{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:24px;
-}
-
-.card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:24px;
-  box-shadow:0 8px 30px rgba(13,34,66,0.04);
-}
-
-.card h3{
-  margin-top:0;
-  margin-bottom:10px;
-  color:var(--navy);
-  font-size:24px;
-}
-
-.small{
-  color:var(--muted);
-  font-size:15px;
-}
-
-ul.clean{
-  margin:10px 0 0 0;
-  padding-left:20px;
-}
-
-.highlight{
-  color:var(--blue);
-  font-weight:700;
-}
-
-.ga-box{
-  background:white;
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:18px;
-  box-shadow:0 8px 30px rgba(13,34,66,0.04);
-}
-
-.ga-box img{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:10px;
-}
-
-table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:18px;
-  background:white;
-  border:1px solid var(--line);
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 8px 30px rgba(13,34,66,0.04);
-}
-
-th, td{
-  padding:14px 16px;
-  text-align:left;
-  border-bottom:1px solid #e8edf5;
-  vertical-align:top;
-}
-
-th{
-  background:var(--navy);
-  color:white;
-  font-size:15px;
-}
-
-tr:last-child td{
-  border-bottom:none;
-}
-
-.pub{
-  background:white;
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:18px 20px;
-  margin-bottom:16px;
-  box-shadow:0 8px 30px rgba(13,34,66,0.04);
-}
-
-.pub-title{
-  font-weight:700;
-  color:var(--navy);
-  margin-bottom:6px;
-}
-
-.muted{
-  color:var(--muted);
-}
-
-.cta{
-  background:linear-gradient(135deg, #0d2a49 0%, #123b69 100%);
-  color:white;
-  border-radius:20px;
-  padding:34px 28px;
-}
-
-.cta h2{
-  margin:0 0 12px 0;
-  font-size:32px;
-}
-
-.cta p{
-  margin:0 0 18px 0;
-  color:rgba(255,255,255,0.86);
-  max-width:820px;
-}
-
-footer{
-  padding:28px 0 40px 0;
-  color:var(--muted);
-  font-size:14px;
-  text-align:center;
-}
-
-@media (max-width: 900px){
-  .hero,
-  .grid-2{
-    grid-template-columns:1fr;
-  }
-
-  .hero h1{
-    font-size:38px;
-  }
-
-  .topbar{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-}
-
-@media (max-width: 560px){
-  .container{
-    padding:0 18px;
-  }
-
-  .hero h1{
-    font-size:32px;
-  }
-
-  .section-title{
-    font-size:28px;
-  }
-
-  .brand-name{
-    font-size:24px;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CentrivaLab: High-throughput centrifugal membrane screening platform based on Ortho-Centrifugal Membrane Filter (O-CMF) technology for NF/RO applications.">
+    <meta name="keywords" content="O-CMF, centrifugal membrane filter, nanofiltration, reverse osmosis, membrane screening, high-throughput filtration">
+    <title>CentrivaLab – High-Throughput Centrifugal Membrane Screening</title>
+    <style>
+        :root {
+            --navy: #0a2540;
+            --blue: #1f6feb;
+            --light: #f5f7fb;
+            --text: #1f2937;
+            --muted: #5b6575;
+            --card: #ffffff;
+            --line: #d9e1ec;
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            line-height: 1.65;
+            background: linear-gradient(rgba(245,247,251,0.94), rgba(245,247,251,0.94)), url("background.svg");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        header {
+            background: linear-gradient(135deg, #0a2540 0%, #12345a 100%);
+            color: white;
+            padding: 28px 0 80px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .brand { display: flex; align-items: center; gap: 14px; }
+        .brand img { height: 52px; width: auto; display: block; }
+        .brand-name { font-size: 28px; font-weight: 700; letter-spacing: 0.2px; }
+        .nav { display: flex; gap: 22px; flex-wrap: wrap; }
+        .nav a { color: white; text-decoration: none; opacity: 0.9; font-size: 15px; transition: opacity 0.3s; }
+        .nav a:hover { opacity: 1; }
+        .hero {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .hero h1 { font-size: 46px; line-height: 1.1; margin: 0 0 16px 0; }
+        .hero p { font-size: 19px; color: rgba(255,255,255,0.88); margin: 0 0 22px 0; max-width: 720px; }
+        .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 26px; }
+        .btn {
+            display: inline-block;
+            padding: 12px 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: scale(1.05); }
+        .btn-primary { background: #ffffff; color: var(--navy); }
+        .btn-secondary { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.35); }
+        .hero-card {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 18px;
+            padding: 22px;
+            backdrop-filter: blur(3px);
+        }
+        .hero-card h3 { margin: 0 0 10px 0; font-size: 18px; }
+        .hero-card p { margin: 0; font-size: 15px; color: rgba(255,255,255,0.82); }
+        main { padding: 56px 0 80px 0; }
+        section { margin-bottom: 58px; }
+        .section-title { font-size: 32px; color: var(--navy); margin: 0 0 14px 0; }
+        .section-intro { color: var(--muted); font-size: 17px; max-width: 900px; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 30px rgba(13,34,66,0.04);
+            transition: box-shadow 0.3s;
+        }
+        .card:hover { box-shadow: 0 12px 40px rgba(13,34,66,0.08); }
+        .card h3 { margin-top: 0; margin-bottom: 10px; color: var(--navy); font-size: 24px; }
+        .small { color: var(--muted); font-size: 15px; }
+        ul.clean { margin: 10px 0 0 0; padding-left: 20px; }
+        .highlight { color: var(--blue); font-weight: 700; }
+        .ga-box {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 18px;
+            box-shadow: 0 8px 30px rgba(13,34,66,0.04);
+        }
+        .ga-box img { width: 100%; height: auto; display: block; border-radius: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 18px; background: white; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: 0 8px 30px rgba(13,34,66,0.04); }
+        th, td { padding: 14px 16px; text-align: left; border-bottom: 1px solid #e8edf5; vertical-align: top; }
+        th { background: var(--navy); color: white; font-size: 15px; }
+        tr:last-child td { border-bottom: none; }
+        .pub {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 18px 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 8px 30px rgba(13,34,66,0.04);
+        }
+        .pub-title { font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+        .muted { color: var(--muted); }
+        .cta {
+            background: linear-gradient(135deg, #0d2a49 0%, #123b69 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 34px 28px;
+        }
+        .cta h2 { margin: 0 0 12px 0; font-size: 32px; }
+        .cta p { margin: 0 0 18px 0; color: rgba(255,255,255,0.86); max-width: 820px; }
+        .faq { margin-top: 20px; }
+        .faq h4 { margin: 0 0 8px 0; font-size: 18px; color: var(--navy); }
+        .faq p { margin: 0 0 20px 0; }
+        form { display: flex; flex-direction: column; gap: 12px; }
+        input, textarea { padding: 10px; border: 1px solid var(--line); border-radius: 8px; }
+        footer { padding: 28px 0 40px 0; color: var(--muted); font-size: 14px; text-align: center; }
+        @media (max-width: 900px) {
+            .hero, .grid-2 { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 38px; }
+            .topbar { flex-direction: column; align-items: flex-start; }
+        }
+        @media (max-width: 560px) {
+            .container { padding: 0 18px; }
+            .hero h1 { font-size: 32px; }
+            .section-title { font-size: 28px; }
+            .brand-name { font-size: 24px; }
+        }
+    </style>
 </head>
-
 <body>
-
-<header>
-  <div class="container">
-    <div class="topbar">
-      <div class="brand">
-        <img src="logo.svg" alt="CentrivaLab logo">
-        <div class="brand-name">CentrivaLab™</div>
-      </div>
-
-      <nav class="nav">
-        <a href="#technology">Technology</a>
-        <a href="#configurations">Configurations</a>
-        <a href="#advantages">Advantages</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-
-    <div class="hero">
-      <div>
-        <h1>High-throughput centrifugal membrane screening</h1>
-        <p>
-          CentrivaLab is a rotor-matched cartridge platform for rapid screening of
-          nanofiltration (NF) and reverse osmosis (RO) membranes under controlled
-          hydrodynamic conditions, based on orthocentrifugal membrane filtration (O-CMF).
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#configurations">Explore configurations</a>
-          <a class="btn btn-secondary" href="#publications">Scientific validation</a>
+    <header>
+        <div class="container">
+            <div class="topbar">
+                <div class="brand">
+                    <img src="logo.svg" alt="CentrivaLab logo">
+                    <div class="brand-name">CentrivaLab™</div>
+                </div>
+                <nav class="nav">
+                    <a href="#technology">Technology</a>
+                    <a href="#configurations">Configurations</a>
+                    <a href="#advantages">Advantages</a>
+                    <a href="#publications">Publications</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+            <div class="hero">
+                <div>
+                    <h1>High-Throughput Centrifugal Membrane Screening</h1>
+                    <p>
+                        CentrivaLab is a rotor-matched cartridge platform for rapid screening of nanofiltration (NF) and reverse osmosis (RO) membranes under controlled hydrodynamic conditions, based on Ortho-Centrifugal Membrane Filter (O-CMF) technology. Validated against bench-scale crossflow units, it delivers uniform pressure, minimal polarization, and scalable results.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#configurations">Explore Configurations</a>
+                        <a class="btn btn-secondary" href="#publications">Scientific Validation</a>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <h3>Current Standard Configuration</h3>
+                    <p>
+                        <span class="highlight" style="color:#8dc3ff;">CentrivaLab 50/34°</span><br>
+                        Designed for 50 mL fixed-angle rotors at 34°. Supports up to 50 bar pressure for NF/RO.<br><br>
+                        Custom versions available for other 50 mL or 96–100 mL formats.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="hero-card">
-        <h3>Current standard configuration</h3>
-        <p>
-          <span class="highlight" style="color:#8dc3ff;">CentrivaLab 50/34°</span><br>
-          Designed for 50 mL fixed-angle rotors at 34°.<br><br>
-          Additional rotor-specific versions can be manufactured on request for
-          other 50 mL and 96–100 mL formats.
-        </p>
-      </div>
-    </div>
-  </div>
-</header>
-
-<main>
-  <div class="container">
-
-    <section id="technology">
-      <h2 class="section-title">Technology</h2>
-      <p class="section-intro">
-        The CentrivaLab platform is based on the orthocentrifugal membrane filtration
-        principle, in which centrifugal force drives permeation across a membrane coupon
-        positioned to achieve controlled and reproducible hydrodynamic conditions.
-        The concept was introduced in the seminal O-CMF work and further expanded for
-        scaled-down high-throughput membrane screening.
-      </p>
-
-      <div class="ga-box">
-        <img src="GraphicalAbstract.png" alt="Graphical abstract of orthocentrifugal membrane filtration">
-      </div>
-    </section>
-
-    <section id="configurations">
-      <h2 class="section-title">Available configurations</h2>
-      <p class="section-intro">
-        CentrivaLab cartridges are rotor-specific and can be manufactured to match
-        tube volume, rotor angle and centrifuge geometry.
-      </p>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3>CentrivaLab 50/34°</h3>
-          <div class="small">Current standard configuration</div>
-          <ul class="clean">
-            <li>Designed for 50 mL fixed-angle rotors at 34°</li>
-            <li>Typical sample volume: up to 15 mL</li>
-            <li>Suitable for NF / RO membrane screening</li>
-            <li>Optimized for controlled concentration polarization studies</li>
-            <li>Ready platform for current rollout</li>
-          </ul>
+    </header>
+    <main>
+        <div class="container">
+            <section id="technology">
+                <h2 class="section-title">Technology</h2>
+                <p class="section-intro">
+                    CentrivaLab leverages the Ortho-Centrifugal Membrane Filter (O-CMF) principle, where centrifugal force drives permeation through a flat-sheet membrane positioned for uniform pressure and reproducible hydrodynamics. Introduced in seminal research and validated for scaled-down screening, O-CMF ensures minimal concentration polarization via centrifugal convection, as confirmed by CFD simulations.
+                </p>
+                <div class="ga-box">
+                    <img src="GraphicalAbstract.png" alt="Graphical abstract of Ortho-Centrifugal Membrane Filter (O-CMF) technology">
+                </div>
+                <img src="device-schematic.png" alt="O-CMF device schematic showing uniform pressure design" style="width: 100%; margin-top: 20px; border-radius: 10px;">
+            </section>
+            <section id="configurations">
+                <h2 class="section-title">Available Configurations</h2>
+                <p class="section-intro">
+                    CentrivaLab cartridges are rotor-specific and customizable to match tube volume, rotor angle, and centrifuge geometry.
+                </p>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>CentrivaLab 50/34°</h3>
+                        <div class="small">Current Standard Configuration</div>
+                        <ul class="clean">
+                            <li>Designed for 50 mL fixed-angle rotors at 34°</li>
+                            <li>Sample volume: up to 15 mL</li>
+                            <li>Suitable for NF/RO membrane screening</li>
+                            <li>Optimized for controlled concentration polarization</li>
+                            <li>Ready for immediate rollout</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Custom Rotor-Matched Designs</h3>
+                        <div class="small">Manufactured on Request</div>
+                        <ul class="clean">
+                            <li>Other 50 mL rotor geometries</li>
+                            <li>96–100 mL rotor formats</li>
+                            <li>Rotor angle-specific matching</li>
+                            <li>Geometry tailored to centrifuge envelope</li>
+                            <li>Material and chamber-volume customization</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2 class="section-title">Materials</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>Available Materials</h3>
+                        <ul class="clean">
+                            <li>Acrylic resin (for rapid prototyping)</li>
+                            <li>PES (polyethersulfone, for aqueous screening)</li>
+                            <li>PEEK (for chemically demanding systems/OSN)</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Typical Use Cases</h3>
+                        <ul class="clean">
+                            <li>Rapid prototyping and early testing</li>
+                            <li>Aqueous membrane screening</li>
+                            <li>Chemically demanding systems</li>
+                            <li>OSN-oriented development pathways</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="advantages">
+                <h2 class="section-title">Why CentrivaLab?</h2>
+                <p class="section-intro">
+                    Validated against bench-scale crossflow units, CentrivaLab combines low sample consumption (&lt;10 mL), rapid turnaround (~5 min assembly), near-zero permeate hold-up, and realistic (spiral-wound-like) concentration polarization for efficient membrane screening.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>CentrivaLab / O-CMF</th>
+                            <th>Crossflow Test Cells</th>
+                            <th>Pressurized Stirred Cells</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Minimum Feed Volume</td>
+                            <td><strong>&lt;10 mL</strong></td>
+                            <td>~1 L</td>
+                            <td>~30 mL</td>
+                        </tr>
+                        <tr>
+                            <td>Assembly Time (6 cells)</td>
+                            <td><strong>~5 min</strong></td>
+                            <td>~30 min</td>
+                            <td>~30 min</td>
+                        </tr>
+                        <tr>
+                            <td>Feed Replacement (6 cells)</td>
+                            <td><strong>~5 min</strong></td>
+                            <td>~15 min</td>
+                            <td>~15 min</td>
+                        </tr>
+                        <tr>
+                            <td>Permeate Retention</td>
+                            <td><strong>Virtually zero</strong></td>
+                            <td>~1 mL / cell</td>
+                            <td>~1 mL / cell</td>
+                        </tr>
+                        <tr>
+                            <td>Concentration Polarization</td>
+                            <td><strong>Uniform and spiral-wound-like</strong></td>
+                            <td>Realistic</td>
+                            <td>Non-uniform</td>
+                        </tr>
+                        <tr>
+                            <td>Pump Required</td>
+                            <td><strong>No</strong></td>
+                            <td>Yes</td>
+                            <td>Typically yes</td>
+                        </tr>
+                        <tr>
+                            <td>Throughput</td>
+                            <td><strong>Hundreds of tests per day per centrifuge</strong></td>
+                            <td>Low</td>
+                            <td>Low to moderate</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="publications">
+                <h2 class="section-title">Scientific Validation</h2>
+                <p class="section-intro">
+                    CentrivaLab is grounded in peer-reviewed research on O-CMF design, hydrodynamics, concentration polarization, and scaled-down membrane screening. An upcoming article co-authored with Professor Menachem Elimelech will further advance predictive modeling.
+                </p>
+                <div class="pub">
+                    <div class="pub-title">Seminal Paper</div>
+                    <div>
+                        <strong>Designing Centrifugal Membrane Filters with Uniform-Pressure for UF/NF/RO Separations</strong><br>
+                        Journal of Membrane Science (2024)
+                    </div>
+                    <div class="muted">
+                        Introduced the O-CMF concept, demonstrating uniform transmembrane pressure, reduced concentration polarization, CFD-supported analysis, and suitability for membrane characterization, screening, and purification.
+                    </div>
+                </div>
+                <div class="pub">
+                    <div class="pub-title">Scaled-Down Membrane Screening Validation</div>
+                    <div>
+                        <strong>Ortho-Centrifugal Membrane Filter for Scaled-Down High-Throughput Screening of Nanofiltration Membranes</strong><br>
+                        Separation and Purification Technology (2025)
+                    </div>
+                    <div class="muted">
+                        Validated O-CMF against a standard crossflow bench-scale unit, showing comparable hydraulic permeabilities, fluxes, rejections, and concentration polarization behavior.
+                    </div>
+                </div>
+                <div class="pub">
+                    <div class="pub-title">Doctoral Application Work</div>
+                    <div>
+                        <strong>From Pulp to Prebiotics: Xylooligosaccharides Production from Eucalyptus Bleached Kraft Pulp and Enhanced Purification Using a Novel High-Throughput Membrane Screening Technique</strong><br>
+                        Patrícia Isabel Antunes Henriques (2024)
+                    </div>
+                    <div class="muted">
+                        Demonstrates application of the screening concept in a broader process and purification context.
+                    </div>
+                </div>
+                <div class="pub">
+                    <div class="pub-title">Ongoing Predictive Modeling Framework</div>
+                    <div>
+                        <strong>Predictive Modeling of Multicomponent Concentration Polarization in Ortho-Centrifugal NF/RO Membrane Screening</strong><br>
+                        Manuscript in Preparation (co-authored with Prof. Menachem Elimelech)
+                    </div>
+                    <div class="muted">
+                        Extends the physical framework toward predictive concentration polarization modeling and intrinsic scaling for NF/RO screening.
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="cta">
+                <h2>Research Cartridges Available on Request</h2>
+                <p>
+                    CentrivaLab cartridges are manufactured on demand through Talentground Lda. Current focus is on scientific and technical collaboration, custom rotor matching, and research use in membrane screening and characterization workflows.
+                </p>
+                <form action="https://formspree.io/f/your-formspree-id" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required aria-label="Name">
+                    <input type="email" name="email" placeholder="Your Email" required aria-label="Email">
+                    <textarea name="message" placeholder="Your Message" rows="4" required aria-label="Message"></textarea>
+                    <button type="submit" class="btn btn-primary">Send Inquiry</button>
+                </form>
+                <div class="faq">
+                    <h4>FAQ: How do I order?</h4>
+                    <p>Use the form above for custom quotes. Pricing starts at €X for standard kits (contact for details).</p>
+                    <h4>FAQ: Is it compatible with my centrifuge?</h4>
+                    <p>We match designs to your rotor specs—send details for a free assessment.</p>
+                </div>
+            </section>
         </div>
-
-        <div class="card">
-          <h3>Custom rotor-matched designs</h3>
-          <div class="small">Manufactured on request</div>
-          <ul class="clean">
-            <li>Other 50 mL rotor geometries</li>
-            <li>96–100 mL rotor formats</li>
-            <li>Rotor angle-specific matching</li>
-            <li>Geometry tailored to centrifuge envelope</li>
-            <li>Material and chamber-volume customization</li>
-          </ul>
+    </main>
+    <footer>
+        <div class="container">
+            CentrivaLab™ · Commercial platform based on Ortho-Centrifugal Membrane Filter (O-CMF) · Talentground Lda. · All rights reserved.
         </div>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="section-title">Materials</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3>Available materials</h3>
-          <ul class="clean">
-            <li>Acrylic resin</li>
-            <li>PES (polyethersulfone)</li>
-            <li>PEEK</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Typical use cases</h3>
-          <ul class="clean">
-            <li>Rapid prototyping and early testing</li>
-            <li>Aqueous membrane screening</li>
-            <li>Chemically demanding systems</li>
-            <li>OSN-oriented development pathways</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="advantages">
-      <h2 class="section-title">Why CentrivaLab?</h2>
-      <p class="section-intro">
-        Comparative analyses reported in the O-CMF literature show that the platform
-        combines low sample consumption, rapid turnaround, near-zero permeate hold-up
-        and realistic concentration polarization conditions for membrane screening.
-      </p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th>CentrivaLab / O-CMF</th>
-            <th>Crossflow test cells</th>
-            <th>Pressurized stirred cells</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Minimum feed volume</td>
-            <td><strong>&lt; 10 mL</strong></td>
-            <td>~1 L</td>
-            <td>~30 mL</td>
-          </tr>
-          <tr>
-            <td>Assembly time (6 cells)</td>
-            <td><strong>~5 min</strong></td>
-            <td>~30 min</td>
-            <td>~30 min</td>
-          </tr>
-          <tr>
-            <td>Feed replacement (6 cells)</td>
-            <td><strong>~5 min</strong></td>
-            <td>~15 min</td>
-            <td>~15 min</td>
-          </tr>
-          <tr>
-            <td>Permeate retention</td>
-            <td><strong>Virtually zero</strong></td>
-            <td>~1 mL / cell</td>
-            <td>~1 mL / cell</td>
-          </tr>
-          <tr>
-            <td>Concentration polarization</td>
-            <td><strong>Uniform and spiral-wound-like</strong></td>
-            <td>Realistic</td>
-            <td>Non-uniform</td>
-          </tr>
-          <tr>
-            <td>Pump required</td>
-            <td><strong>No</strong></td>
-            <td>Yes</td>
-            <td>Typically yes / pressure-driven setup</td>
-          </tr>
-          <tr>
-            <td>Throughput</td>
-            <td><strong>Hundreds of tests per day per centrifuge</strong></td>
-            <td>Low</td>
-            <td>Low to moderate</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section id="publications">
-      <h2 class="section-title">Scientific validation</h2>
-      <p class="section-intro">
-        The CentrivaLab platform is grounded in peer-reviewed research on O-CMF design,
-        hydrodynamics, concentration polarization and scaled-down membrane screening.
-      </p>
-
-      <div class="pub">
-        <div class="pub-title">Seminal paper</div>
-        <div>
-          <strong>Designing Centrifugal Membrane Filters with uniform-pressure for UF/NF/RO separations</strong><br>
-          Journal of Membrane Science (2024)
-        </div>
-        <div class="muted">
-          Introduced the O-CMF concept, demonstrating uniform transmembrane pressure,
-          reduced concentration polarization, CFD-supported analysis, and suitability
-          for membrane characterization, screening and purification.
-        </div>
-      </div>
-
-      <div class="pub">
-        <div class="pub-title">Scaled-down membrane screening validation</div>
-        <div>
-          <strong>Ortho-centrifugal membrane filter for scaled-down high-throughput screening of nanofiltration membranes</strong><br>
-          Separation and Purification Technology (2025)
-        </div>
-        <div class="muted">
-          Validated O-CMF against a standard crossflow bench-scale unit, showing
-          comparable hydraulic permeabilities, fluxes, rejections and concentration
-          polarization behavior.
-        </div>
-      </div>
-
-      <div class="pub">
-        <div class="pub-title">Doctoral application work</div>
-        <div>
-          <strong>From pulp to prebiotics: Xylooligosaccharides production from eucalyptus bleached kraft pulp and enhanced purification using a novel high-throughput membrane screening technique</strong><br>
-          Patrícia Isabel Antunes Henriques (2024)
-        </div>
-        <div class="muted">
-          Demonstrates application of the screening concept in a broader process and purification context.
-        </div>
-      </div>
-
-      <div class="pub">
-        <div class="pub-title">Ongoing predictive modelling framework</div>
-        <div>
-          <strong>Predictive modelling of multicomponent concentration polarization in orthocentrifugal NF/RO membrane screening</strong><br>
-          Manuscript in preparation / submission pathway
-        </div>
-        <div class="muted">
-          Extends the physical framework toward predictive concentration polarization
-          modelling and intrinsic scaling for NF/RO screening.
-        </div>
-      </div>
-    </section>
-
-    <section class="cta" id="contact">
-      <h2>Research cartridges available on request</h2>
-      <p>
-        CentrivaLab cartridges are manufactured on demand through Talentground Lda.
-        Current focus is scientific and technical collaboration, custom rotor matching,
-        and research use in membrane screening and characterization workflows.
-      </p>
-      <a class="btn btn-primary" href="mailto:contact@centrivalab.com">Contact CentrivaLab</a>
-    </section>
-
-  </div>
-</main>
-
-<footer>
-  <div class="container">
-    CentrivaLab™ · Commercial platform based on orthocentrifugal membrane filtration (O-CMF) · Talentground Lda.
-  </div>
-</footer>
-
+    </footer>
 </body>
 </html>

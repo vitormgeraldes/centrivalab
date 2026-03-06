@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technical specifications for the CentrivaLab™ 50/34 cartridge – a fixed‑angle centrifugal membrane screening device for 50 mL conical tubes.">
+    <title>CentrivaLab™ 50/34 – Technical Specifications</title>
+    <style>
+        :root {
+            --navy: #08203a;
+            --navy-2: #0d3158;
+            --blue: #38b6ff;
+            --blue-light: #7dd3fc;
+            --light: #f4f8fc;
+            --text: #16324a;
+            --muted: #8fb3cf;
+            --card-bg: #ffffff;
+            --line: #d9e1ec;
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            line-height: 1.65;
+            background: var(--light);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+            color: white;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        header .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        header .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        header .brand img {
+            height: 50px;
+            width: auto;
+        }
+        header .brand-name {
+            font-size: 26px;
+            font-weight: 700;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+        header nav a:hover { opacity: 1; }
+        h1 {
+            font-size: 42px;
+            margin: 40px 0 10px;
+        }
+        h2 {
+            font-size: 32px;
+            margin: 40px 0 16px;
+            color: var(--navy);
+        }
+        p.subtitle {
+            color: var(--muted);
+            font-size: 18px;
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(13,34,66,0.05);
+        }
+        th, td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e8edf5;
+            vertical-align: top;
+        }
+        th {
+            background: var(--navy);
+            color: white;
+            font-size: 15px;
+        }
+        tr:last-child td { border-bottom: none; }
+        .btn {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            background: var(--blue);
+            color: white;
+        }
+        .btn:hover { background: var(--blue-light); }
+        .equation {
+            font-family: Consolas, monospace;
+            background: #f5f7fb;
+            padding: 12px;
+            border-left: 4px solid var(--blue);
+            margin-top: 12px;
+            overflow-x: auto;
+        }
+        footer {
+            margin-top: 40px;
+            padding: 20px 0;
+            color: var(--muted);
+            font-size: 14px;
+            text-align: center;
+        }
+        @media (max-width: 700px) {
+            h1 { font-size: 32px; }
+            h2 { font-size: 26px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container topbar">
+            <div class="brand">
+                <a href="index.html"><img src="logo.svg" alt="CentrivaLab logo"></a>
+                <div class="brand-name">CentrivaLab™</div>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#specs">Specifications</a>
+                <a href="#envelope">Envelope</a>
+                <a href="#compatibility">Compatibility</a>
+                <a href="#download">Download</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>CentrivaLab™ 50/34</h1>
+        <p class="subtitle">Orthogonal Centrifugal Membrane Cartridge for 50 mL Conical Tubes</p>
+
+        <p>
+            The CentrivaLab™ 50/34 cartridge is a centrifugal membrane filtration device designed to operate inside standard laboratory centrifuges equipped with fixed‑angle rotors. By exploiting the Orthogonal‑Centrifugal Membrane Filter (O‑CMF) principle, the cartridge converts rotor angular velocity directly into transmembrane pressure, eliminating the need for external pumps or pressurisation hardware.  The 50/34 configuration is optimised for 50 mL conical centrifuge tubes at an effective rotor angle around 34°.
+        </p>
+
+        <h2 id="specs">Key Specifications</h2>
+        <table>
+            <tbody>
+                <tr><th scope="row">Tube interface</th><td>50 mL conical centrifuge tube</td></tr>
+                <tr><th scope="row">Rotor class</th><td>Fixed‑angle (~34°)</td></tr>
+                <tr><th scope="row">Nominal feed volume</th><td>13 mL</td></tr>
+                <tr><th scope="row">Operating fill range</th><td>11–13 mL</td></tr>
+                <tr><th scope="row">Concentrate chamber volume</th><td>4.6 mL</td></tr>
+                <tr><th scope="row">Pressure range</th><td>2–60 bar equivalent*</td></tr>
+                <tr><th scope="row">Rotor speed range</th><td>3 000 – 20 000 RPM</td></tr>
+                <tr><th scope="row">Membrane offset (δ<sub>m</sub>)</th><td>3.18 cm</td></tr>
+                <tr><th scope="row">Free surface offset (δ<sub>0</sub>)</th><td>3.67 cm</td></tr>
+                <tr><th scope="row">Free surface slope (α)</th><td>0.15 cm mL⁻¹</td></tr>
+                <tr><th scope="row">Membrane format</th><td>Flat coupon</td></tr>
+                <tr><th scope="row">Validated fluid</th><td>Water at 20 °C</td></tr>
+            </tbody>
+        </table>
+        <p style="font-size: 0.9em; color: var(--muted); margin-top: 6px;">*Equivalent pressure calculated from centrifugal hydrostatics at specified rotor speeds and fill volumes.</p>
+
+        <h2 id="envelope">Operating Envelope</h2>
+        <p>
+            For a nominal fill volume of 13 mL and water at 20 °C, the approximate relationship between applied transmembrane pressure and rotor speed is summarised below.  These values are derived from the centrifugation pressure equation and are meant for guidance; actual pressures may vary slightly depending on tube geometry and fluid density.
+        </p>
+        <table>
+            <thead>
+                <tr><th>Equivalent pressure</th><th>Rotor speed (RPM)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>2 bar</td><td>≈ 3 400</td></tr>
+                <tr><td>10 bar</td><td>≈ 7 600</td></tr>
+                <tr><td>20 bar</td><td>≈ 10 800</td></tr>
+                <tr><td>40 bar</td><td>≈ 15 300</td></tr>
+                <tr><td>60 bar</td><td>≈ 18 700</td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="compatibility">Rotor Compatibility</h2>
+        <p>
+            The CentrivaLab 50/34 cartridge is designed to fit standard 50 mL conical tubes and can therefore be used in any centrifuge rotor that accommodates this tube format.  Example rotors are listed below to illustrate the range of compatible equipment; other rotors with similar geometry and speed capability may also be suitable.
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Manufacturer</th>
+                    <th>Rotor</th>
+                    <th>Capacity</th>
+                    <th>Angle</th>
+                    <th>Max RPM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Beckman Coulter</td>
+                    <td>JA‑20</td>
+                    <td>8 × 50 mL</td>
+                    <td>34°</td>
+                    <td>20 000</td>
+                </tr>
+                <tr>
+                    <td>Thermo / Sorvall</td>
+                    <td>SS‑34</td>
+                    <td>8 × 50 mL</td>
+                    <td>34°</td>
+                    <td>20 500</td>
+                </tr>
+                <tr>
+                    <td>Thermo Scientific</td>
+                    <td>F14‑6×50</td>
+                    <td>6 × 50 mL</td>
+                    <td>≈ 34°</td>
+                    <td>14 000</td>
+                </tr>
+                <tr>
+                    <td>Eppendorf</td>
+                    <td>FA‑45‑6‑30</td>
+                    <td>6 × 50 mL</td>
+                    <td>≈ 30°</td>
+                    <td>14 000</td>
+                </tr>
+                <tr>
+                    <td>Hettich</td>
+                    <td>1617‑A</td>
+                    <td>6 × 50 mL</td>
+                    <td>≈ 30°</td>
+                    <td>15 000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Physics of Operation</h2>
+        <p>
+            The transmembrane pressure generated by the cartridge is governed by centrifugal hydrostatics.  For a uniform fluid with density ρ rotated at angular velocity ω, the pressure drop across a flat membrane positioned at radius <em>r</em><sub>m</sub> relative to the free surface at radius <em>r</em><sub>s</sub> is given by:
+        </p>
+        <div class="equation">
+            Δp = ½ ρ ω² ( r<sub>m</sub>² − r<sub>s</sub>² )
+        </div>
+        <p>
+            In the CentrivaLab cartridge, the membrane offset δ<sub>m</sub> and free surface offset δ<sub>0</sub> define the effective radii r<sub>m</sub> and r<sub>s</sub> according to the fill volume.  This relationship allows users to predict the operating pressure at a given rotor speed, facilitating reproducible membrane screening under well‑defined hydrodynamic conditions.
+        </p>
+
+        <h2 id="download">Documentation</h2>
+        <p>
+            A comprehensive technical datasheet is available for download.  It contains detailed drawings, dimensional tolerances, flow path diagrams and a complete derivation of the operating equations.
+        </p>
+        <a class="btn" href="o-cmf-50-34-specification-1.0.pdf">Download Datasheet (PDF)</a>
+    </main>
+
+    <footer>
+        <div class="container">
+            CentrivaLab™ 50/34 – Orthogonal Centrifugal Membrane Cartridge · Talentground Lda. · All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

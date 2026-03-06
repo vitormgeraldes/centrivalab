@@ -1,68 +1,123 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta name='description' content='Scientific and engineering basis of the CentrivaLab platform.'>
-  <title>Technology – CentrivaLab</title>
-  <link rel='stylesheet' href='assets/styles.css'>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technology — CentrivaLab</title>
+  <meta name="description" content="Scientific and engineering basis of the O-CMF technology behind the CentrivaLab platform." />
 </head>
 <body>
-  <header class='site-header'>
-    <div class='container topbar'>
-      <a class='brand' href='index.html'>
-        <img class='brand-mark' src='assets/logo.svg' alt='CentrivaLab logo'>
-        <div class='brand-name'>CentrivaLab™</div>
-      </a>
-      <nav class='nav'><a href='technology.html'>Technology</a><a href='products.html'>Products</a><a href='specifications/centrivalab-50-34.html'>Specifications</a><a href='applications.html'>Applications</a><a href='publications.html'>Publications</a><a href='support.html'>Support</a><a href='contact.html'>Contact</a></nav>
-    </div>
-    
-        <div class='container page-hero'>
-          <div class='breadcrumbs'><a href='index.html'>Home</a> / Technology</div>
-          <h1>Technology</h1>
-          <p>Scientific and engineering basis of the CentrivaLab platform.</p>
-        </div>
-  </header>
   <main>
-    
-<section class='container'>
-  <h2 class='section-title'>O-CMF principle</h2>
-  <p class='section-intro'>Orthogonal Centrifugal Membrane Filter (O-CMF) technology uses centrifugal hydrostatics to create transmembrane pressure inside rotor-matched cartridge geometries. This provides a compact route to defined membrane-screening conditions within standard centrifuge infrastructure.</p>
-  <div class='grid-2'>
-    <div class='card'>
-      <h3>Core idea</h3>
-      <p>The cartridge geometry converts rotor angular velocity into an equivalent pressure field across the membrane. The result is a screening workflow that is compact, reproducible and easier to benchmark than many ad hoc centrifugal approaches.</p>
-    </div>
-    <div class='card'>
-      <h3>What stays scientific</h3>
-      <p>In papers, reports and academic discussions, the scientific term should remain O-CMF. The brand CentrivaLab is the commercial platform built on that principle.</p>
-    </div>
-  </div>
-</section>
+    <section>
+      <h1>Orthogonal Centrifugal Membrane Filter (O-CMF)</h1>
+      <p>CentrivaLab™ is the commercial platform built on the Orthogonal Centrifugal Membrane Filter (O-CMF) principle. In scientific communication, the correct technical term remains O-CMF.</p>
+      <p>O-CMF uses centrifugal hydrostatics to create transmembrane pressure inside rotor-matched cartridge geometries. This provides a compact route to membrane screening workflows within standard centrifuge infrastructure.</p>
+    </section>
 
-<section class='container'>
-  <div class='callout'>
-    <strong>Guiding rule:</strong> technology language explains the principle; product language explains what the customer can evaluate, buy or request.
-  </div>
-</section>
+    <section>
+      <h2>Validated against crossflow NF screening</h2>
+      <p>Published validation work compared O-CMF against a reference NF crossflow bench-scale unit (SEPA CF Cell) using two commercial nanofiltration membranes and standard reference solutes including NaCl, MgSO₄, glucose, sucrose and lactose.</p>
+      <p>The validation criteria covered membrane representativeness, water permeability, permeation fluxes, rejection values, osmotic-pressure robustness and concentration-polarization behaviour.</p>
 
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Reference crossflow</th>
+            <th>O-CMF</th>
+            <th>Interpretation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hydraulic permeability, MPF-34</td>
+            <td>3.53 L·h⁻¹·m⁻²·bar⁻¹</td>
+            <td>3.95 L·h⁻¹·m⁻²·bar⁻¹</td>
+            <td>12% difference</td>
+          </tr>
+          <tr>
+            <td>Hydraulic permeability, NFS</td>
+            <td>6.40 L·h⁻¹·m⁻²·bar⁻¹</td>
+            <td>6.85 L·h⁻¹·m⁻²·bar⁻¹</td>
+            <td>7% difference</td>
+          </tr>
+          <tr>
+            <td>Flux and rejection behaviour</td>
+            <td>Bench-scale NF baseline</td>
+            <td>Comparable over representative conditions</td>
+            <td>Strong alignment for neutral solutes and divalent salts</td>
+          </tr>
+          <tr>
+            <td>Throughput</td>
+            <td>Single membrane per run</td>
+            <td>Multiple membranes per centrifuge run</td>
+            <td>High-throughput screening advantage</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Uniform-pressure design</h2>
+      <p>The defining geometric feature of the O-CMF is the orthogonal placement of a flat membrane coupon relative to the centrifugal acceleration. This was designed to address non-uniform transmembrane pressure and excessive local polarization commonly associated with conventional centrifugal membrane filters.</p>
+      <p>The compact cartridge architecture also simplifies membrane replacement and creates a geometry that is easier to analyse, benchmark and standardise experimentally.</p>
+    </section>
+
+    <section>
+      <h2>Concentration polarization and CFD insight</h2>
+      <p>CFD and experimental analysis showed that the concentrate chamber is homogenized by centrifugal convection and that time-averaged concentration polarization is nearly uniform across most of the membrane surface.</p>
+      <p>Under demanding conditions, the concentration-polarization index remained below 2.0, while in industrially relevant NF flux windows around 20–30 L·h⁻¹·m⁻² it commonly falls into a much lower range, often around 0.2–0.4.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Flux regime</th>
+            <th>Typical interpretation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>20–30 L·h⁻¹·m⁻²</td>
+            <td>Typical NF/RO operating window with low concentration polarization</td>
+          </tr>
+          <tr>
+            <td>~60 L·h⁻¹·m⁻²</td>
+            <td>Crossflow-relevant range where polarization becomes more evident</td>
+          </tr>
+          <tr>
+            <td>Up to ~160 L·h⁻¹·m⁻²</td>
+            <td>Extreme screening regime; polarization remains controlled rather than dominant</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Rotor-matched cartridge families</h2>
+      <p>The commercial platform is being focused around two rotor-native product families.</p>
+
+      <h3>CentrivaLab 50/34</h3>
+      <p>Designed for 50 mL conical tubes and fixed-angle rotors around 34°, especially JA-20 class 8 × 50 mL rotors. This is the current reference family for higher-pressure NF/RO screening.</p>
+
+      <h3>CentrivaLab 94/25</h3>
+      <p>Planned for 94 mL rotor-class geometries around 25–26°, with emphasis on Sigma 4 × 94 mL and 6 × 94 mL fixed-angle rotors. This family is strategically important because it supports compact bench-top centrifuge workflows at approximately 15,000–20,000 rpm.</p>
+    </section>
+
+    <section>
+      <h2>Materials strategy</h2>
+      <p>Public technology communication should not expose unnecessary manufacturing detail. At product level, CentrivaLab cartridges can be implemented in prototype-grade acrylic resins and in higher-performance engineering polymers such as PEEK, PAEK and PPS, depending on the workflow, chemistry and manufacturing maturity.</p>
+      <p>Final wetted-material stacks should be controlled through specification pages, datasheets and compatibility notes, not improvised in broad marketing text.</p>
+    </section>
+
+    <section>
+      <h2>Scope</h2>
+      <p>The published validation work is centered on aqueous nanofiltration screening, with direct comparison against a reference crossflow unit. The broader pressure range and design logic of O-CMF also support future work in UF and RO-oriented workflows.</p>
+    </section>
   </main>
-  
-    <footer class='footer'>
-      <div class='container footer-grid'>
-        <div>
-          <h4>CentrivaLab™</h4>
-          <p class='small'>Commercial platform based on the Orthogonal Centrifugal Membrane Filter (O-CMF) principle for centrifugal NF/RO membrane screening.</p>
-        </div>
-        <div>
-          <h4>Navigation</h4>
-          <p class='small'><a href='products.html'>Products</a><br><a href='applications.html'>Applications</a><br><a href='publications.html'>Publications</a></p>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <p class='small'><a href='contact.html'>Request technical discussion</a><br><a href='mailto:info@centrivalab.com'>info@centrivalab.com</a></p>
-        </div>
-      </div>
-    </footer>
+
+  <footer>
+    <p>CentrivaLab is a commercial brand of Talentground Lda.</p>
+    <p>CentrivaLab products are intended for research and process development use only and are not intended for clinical or diagnostic use.</p>
+  </footer>
 </body>
 </html>

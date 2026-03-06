@@ -1,42 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 130">
 
 <defs>
 
-<linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
-<stop offset="0%" stop-color="#6ec3ff"></stop>
-<stop offset="100%" stop-color="#1f6feb"></stop>
+<linearGradient id="vortex1" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#7dd3fc"></stop>
+<stop offset="100%" stop-color="#38bdf8"></stop>
 </linearGradient>
 
-<linearGradient id="metalGrad" x1="0" y1="0" x2="1" y2="1">
-<stop offset="0%" stop-color="#e6e6e6"></stop>
-<stop offset="100%" stop-color="#9fa7b0"></stop>
+<linearGradient id="vortex2" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#38bdf8"></stop>
+<stop offset="100%" stop-color="#2563eb"></stop>
 </linearGradient>
 
 </defs>
 
-<!-- vortex icon -->
-<g transform="translate(70,60)">
+<!-- vortex symbol -->
+<g transform="translate(70,65)">
 
-<!-- swirl blades -->
-<path d="M0,-38 C22,-38 38,-18 38,0 C38,20 18,38 0,38" fill="none" stroke="url(#blueGrad)" stroke-width="10" stroke-linecap="round"></path>
+<!-- outer vortex -->
+<path d="M0,-42
+C24,-42 42,-20 42,0
+C42,24 22,42 0,42" fill="none" stroke="url(#vortex1)" stroke-width="10" stroke-linecap="round"></path>
 
-<path d="M0,38 C-22,38 -38,18 -38,0 C-38,-20 -18,-38 0,-38" fill="none" stroke="url(#metalGrad)" stroke-width="10" stroke-linecap="round"></path>
+<!-- inner vortex -->
+<path d="M0,42
+C-24,42 -42,20 -42,0
+C-42,-24 -20,-42 0,-42" fill="none" stroke="url(#vortex2)" stroke-width="10" stroke-linecap="round"></path>
 
-<path d="M-26,-18 C-10,-40 22,-40 34,-10" fill="none" stroke="url(#blueGrad)" stroke-width="8" stroke-linecap="round"></path>
+<!-- vortex tail -->
+<path d="M-30,-20
+C-10,-48 28,-48 44,-10" fill="none" stroke="#7dd3fc" stroke-width="7" stroke-linecap="round"></path>
 
 <!-- membrane core -->
-<circle cx="0" cy="0" r="6" fill="#0a2540"></circle>
+<circle cx="0" cy="0" r="6" fill="#ffffff"></circle>
 
 </g>
 
-<!-- text -->
-<text x="140" y="60" font-family="Montserrat, Arial, Helvetica, sans-serif" font-size="42" font-weight="700" fill="#1f3c73">
+<!-- brand -->
+<text x="150" y="68" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="700" fill="#ffffff">
+
 CentrivaLab
 </text>
 
+<!-- trademark -->
+<text x="415" y="44" font-family="Inter, Arial, sans-serif" font-size="16" fill="#7dd3fc">
+
+™
+</text>
+
 <!-- tagline -->
-<text x="140" y="88" font-family="Montserrat, Arial, Helvetica, sans-serif" font-size="20" fill="#2f7da1">
+<text x="150" y="100" font-family="Inter, Arial, sans-serif" font-size="22" fill="#7dd3fc">
+
 Centrifugal Membrane Screening
+
 </text>
 
 </svg>

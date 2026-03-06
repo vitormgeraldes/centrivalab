@@ -5,45 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products — CentrivaLab</title>
   <meta name="description" content="Commercial product families of the CentrivaLab membrane screening platform." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container topbar">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="logo.svg" alt="CentrivaLab logo" />
+        <span class="brand-name">CentrivaLab™</span>
+      </a>
+      <nav class="nav">
+        <a href="technology.html">Technology</a>
+        <a href="products.html">Products</a>
+        <a href="specifications.html">Specifications</a>
+        <a href="applications.html">Applications</a>
+        <a href="publications.html">Publications</a>
+        <a href="support.html">Support</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="container page-hero">
+      <div class="breadcrumbs"><a href="index.html">Home</a> / Products</div>
+      <h1>Products</h1>
+      <p>CentrivaLab products are organised as a scalable cartridge platform with simple commercial naming and internal engineering traceability.</p>
+    </div>
+  </header>
+
   <main>
-    <section>
-      <h1>Product platform</h1>
-      <p>CentrivaLab™ products are organised as a scalable cartridge platform. Commercial names remain simple and stable, while deeper engineering identifiers evolve internally for traceability, revision control and manufacturing governance.</p>
+    <section class="container">
+      <h2 class="section-title">Commercial product families</h2>
+      <div class="grid-2">
+        <article class="card">
+          <span class="eyebrow">Reference configuration</span>
+          <h3>CentrivaLab 50/34</h3>
+          <p>Orthogonal centrifugal membrane cartridge for 50 mL conical tubes and fixed-angle rotors around 34°, positioned as the current commercial reference family.</p>
+          <div class="tag">50 mL class</div>
+          <div class="tag">~34° rotor geometry</div>
+          <div class="tag">NF / RO screening</div>
+          <p style="margin-top:16px;"><a href="specifications/centrivalab-50-34.html">View specification</a></p>
+        </article>
+        <article class="card">
+          <span class="eyebrow">Planned family</span>
+          <h3>CentrivaLab 94/25</h3>
+          <p>Reserved for 94 mL rotor-class geometries around 25–26°, supporting future bench-top platform expansion without changing the website architecture.</p>
+          <div class="tag">94 mL class</div>
+          <div class="tag">Bench-top centrifuges</div>
+          <div class="tag">Planned / under development</div>
+        </article>
+      </div>
     </section>
 
-    <section>
-      <h2>Commercial configurations</h2>
-
-      <h3>CentrivaLab 50/34</h3>
-      <p>Current reference configuration for 50 mL conical tubes and fixed-angle rotors around 34°, especially JA-20 class 8 × 50 mL rotors. Designed for high-pressure NF/RO screening workflows in standard centrifuge infrastructure.</p>
-      <p>Status: commercial reference configuration.</p>
-
-      <h3>CentrivaLab 94/25</h3>
-      <p>Planned bench-top configuration for 94 mL rotor-class geometries around 25–26°, targeting Sigma 4 × 94 mL and 6 × 94 mL fixed-angle rotors. Designed to extend the platform into compact laboratory centrifuge workflows at 15,000–20,000 rpm.</p>
-      <p>Status: planned / under development.</p>
+    <section class="container split">
+      <div class="card">
+        <span class="eyebrow">Photo placeholder</span>
+        <h3>image.surrogate</h3>
+        <p>Use a clean three-quarter product photo of the 50/34 here.</p>
+      </div>
+      <div>
+        <h2 class="section-title">Architecture and control</h2>
+        <p class="section-intro">Commercial pages should foreground stable customer-facing configuration names, while internal engineering identifiers, revisions and serials remain controlled in operations and documentation.</p>
+        <table>
+          <thead>
+            <tr><th>Layer</th><th>Example</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Brand</td><td>CentrivaLab™</td></tr>
+            <tr><td>Technology</td><td>O-CMF</td></tr>
+            <tr><td>Configuration</td><td>50/34, 94/25</td></tr>
+            <tr><td>Engineering model</td><td>Internal only</td></tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <section>
-      <h2>How product architecture is managed</h2>
-      <ul>
-        <li><strong>Brand:</strong> CentrivaLab™</li>
-        <li><strong>Technology:</strong> O-CMF</li>
-        <li><strong>Configuration:</strong> 50/34, 94/25</li>
-        <li><strong>Engineering identifiers:</strong> managed internally for traceability and revision control</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Materials and build logic</h2>
-      <p>Commercial pages should not overcommit to a single public material stack. Depending on the product maturity and application envelope, builds may involve acrylic prototype resins, PEEK, PAEK, PPS and other supporting materials defined in the corresponding specifications and documentation.</p>
+    <section class="container banner">
+      <h2>Materials communication</h2>
+      <p>Public product pages should stay concise and buyer-oriented, while wetted materials, compatibility and build-specific details live in specification pages and controlled documents.</p>
     </section>
   </main>
 
-  <footer>
-    <p>CentrivaLab is a commercial brand of Talentground Lda.</p>
-    <p>CentrivaLab products are intended for research and process development use only and are not intended for clinical or diagnostic use.</p>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>CentrivaLab™</h4>
+        <p>CentrivaLab is a commercial brand of Talentground Lda.</p>
+        <p>CentrivaLab products are intended for research and process development use only and are not intended for clinical or diagnostic use.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <p><a href="technology.html">Technology</a><br><a href="specifications.html">Specifications</a><br><a href="publications.html">Publications</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="contact.html">Technical enquiries</a></p>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

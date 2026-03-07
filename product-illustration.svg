@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" fill="none">
+<rect width="900" height="520" rx="28" fill="#F8FBFE"/>
+<rect x="180" y="104" width="430" height="110" rx="28" transform="rotate(18 180 104)" fill="#0A2749"/>
+<rect x="214" y="125" width="362" height="68" rx="20" transform="rotate(18 214 125)" fill="#123D68"/>
+<rect x="304" y="147" width="126" height="28" rx="14" transform="rotate(18 304 147)" fill="#38B6FF" opacity="0.9"/>
+<rect x="266" y="222" width="162" height="126" rx="24" transform="rotate(18 266 222)" fill="#DDF3FF" stroke="#38B6FF" stroke-width="4"/>
+<rect x="398" y="265" width="150" height="92" rx="18" transform="rotate(18 398 265)" fill="#FFFFFF" stroke="#123D68" stroke-width="4"/>
+<circle cx="500" cy="188" r="14" fill="#7AE6FF"/>
+<path d="M130 418C213 334 313 276 420 246" stroke="#38B6FF" stroke-width="7" stroke-dasharray="10 10"/>
+<text x="118" y="454" fill="#123D68" font-family="Arial" font-size="24" font-weight="700">Rotor-matched cartridge concept</text>
+</svg>
